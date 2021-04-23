@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="406.0" prefWidth="592.0" style="-fx-background-color: #393647;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AjoutController">
+   <children>
+      <Pane layoutX="91.0" layoutY="68.0" prefHeight="277.0" prefWidth="430.0" style="-fx-background-color: #ededed;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.9473684430122375" green="0.9298245906829834" blue="0.9298245906829834" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <TextField layoutX="231.0" layoutY="35.0" />
+            <TextField layoutX="231.0" layoutY="87.0" />
+            <Label layoutX="39.0" layoutY="39.0" prefHeight="25.0" prefWidth="46.0" text="Nom">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="88.0" text="Prénom">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="138.0" text="Année de naissance">
+               <font>
+                  <Font name="Tahoma Bold" size="16.0" />
+               </font>
+            </Label>
+            <MenuButton layoutX="231.0" layoutY="134.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Année">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </MenuButton>
+            <MenuButton layoutX="231.0" layoutY="182.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Promotion">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="L3" />
+                  <MenuItem mnemonicParsing="false" text="M1" />
+                  <MenuItem mnemonicParsing="false" text="M2" />
+               </items>
+            </MenuButton>
+            <Label layoutX="38.0" layoutY="183.0" text="Promotion">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="235.0" text="Option">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="20.0" fitWidth="33.0" layoutX="85.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/img/required.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="133.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/img/required.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="20.0" layoutX="197.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/img/required.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="46.0" layoutX="108.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/img/required.png" />
+               </image>
+            </ImageView>
+            <MenuButton layoutX="231.0" layoutY="234.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Option">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Biotechnologies" />
+                  <MenuItem mnemonicParsing="false" text="Physiologie" />
+                  <MenuItem mnemonicParsing="false" text="Imagerie" />
+               </items>
+            </MenuButton>
+         </children>
+      </Pane>
+      <ImageView fx:id="backBtn" fitHeight="45.0" fitWidth="70.0" layoutX="26.0" layoutY="17.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ressources/img/back.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="129.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ressources/img/required.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="152.0" layoutY="44.0" text="Champs obligatoire" textFill="WHITE" />
+      <Button layoutX="139.0" layoutY="367.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="104.0" text="Réinitialiser">
+         <font>
+            <Font name="Tahoma" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="322.0" layoutY="367.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="104.0" style="-fx-background-color: #393647; -fx-border-color: white;" text="Confirmer" textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
