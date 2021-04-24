@@ -65,7 +65,7 @@ import javafx.stage.Stage;
                 // Show the scene containing the root layout.
                 Scene scene = new Scene(rootLayout);
                 primaryStage.setScene(scene);
-                primaryStage.getIcons().add(new Image(MainApp.class.getResourceAsStream("ressources/img/Logo-Master-Gphy2.png")));
+                //primaryStage.getIcons().add(new Image(MainApp.class.getResourceAsStream("ressources/img/Logo-Master-Gphy2.png")));
 
                 primaryStage.show();
             } catch (IOException e) {
@@ -98,7 +98,7 @@ import javafx.stage.Stage;
             try {
                 // Load the fxml file and create a new stage for the popup dialog.
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(MainApp.class.getResource("FXML/ModifEtu.fxml"));
+                loader.setLocation(MainApp.class.getResource("FXML/modifEtu.fxml"));
                 AnchorPane page = (AnchorPane) loader.load();
 
                 // Create the dialog Stage.
@@ -108,7 +108,7 @@ import javafx.stage.Stage;
                 dialogStage.initOwner(primaryStage);
                 Scene scene = new Scene(page);
                 dialogStage.setScene(scene);
-                dialogStage.getIcons().add(new Image(MainApp.class.getResourceAsStream("ressources/img/modify.png")));
+                //dialogStage.getIcons().add(new Image(MainApp.class.getResourceAsStream("ressources/img/modify.png")));
 
                 // Set the student into the controller.
                 ModifController controller = loader.getController();

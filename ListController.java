@@ -106,6 +106,9 @@ public class ListController implements Initializable {
             }
             mainApp.setData(dataListRemove);
             myTable.setItems(mainApp.getEtudiantData());
+            countCB = 0;
+            deleteButton.setDisable(true);
+            modifyButton.setDisable(true);
         }
     }
 

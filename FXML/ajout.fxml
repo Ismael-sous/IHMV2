@@ -13,7 +13,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="406.0" prefWidth="592.0" style="-fx-background-color: #393647;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AjoutController">
+<AnchorPane prefHeight="406.0" prefWidth="592.0" style="-fx-background-color: #393647;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AjoutController">
    <children>
       <Pane layoutX="91.0" layoutY="68.0" prefHeight="277.0" prefWidth="430.0" style="-fx-background-color: #ededed;">
          <effect>
