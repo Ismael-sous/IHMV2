@@ -45,6 +45,7 @@ import javafx.stage.Stage;
             this.primaryStage = primaryStage;
             this.primaryStage.setTitle("GphyApp");
 
+
             initRootLayout();
             showAccueil();
         }
@@ -62,13 +63,14 @@ import javafx.stage.Stage;
                 // Show the scene containing the root layout.
                 Scene scene = new Scene(rootLayout);
                 primaryStage.setScene(scene);
-                primaryStage.getIcons().add(new Image(MainApp.class.getResourceAsStream("ressources/img/pngegg.png")));
+                primaryStage.getIcons().add(new Image(MainApp.class.getResourceAsStream("ressources/img/Logo-Master-Gphy2.png")));
 
                 primaryStage.show();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
+
 
         /**
          * Affichage de l'accueil dans root layout
