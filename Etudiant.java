@@ -5,7 +5,7 @@ import javafx.scene.control.CheckBox;
 /**
  * Classe Etudiant: création d'un étudiant
  * @date 04/2021
- * @author A. Calmont, J. Trouve, I. Sousane
+ * @author A. Calmont, I. Sousane, J. Trouve
  */
 public class Etudiant {
     /**
@@ -55,11 +55,9 @@ public class Etudiant {
         this.select = new CheckBox();
     }
 
-
     public CheckBox getSelect() {
         return select;
     }
-
 
     public void setSelect(CheckBox select) {
         this.select = select;
@@ -69,21 +67,17 @@ public class Etudiant {
         return prenom.get();
     }
 
-
     public String getNom() {
         return nom.get();
     }
-
 
     public int getAnnee() {
         return annee.get();
     }
 
-
     public String getPromo() {
         return promo.get();
     }
-
 
     public String getOption() {
         return option.get();

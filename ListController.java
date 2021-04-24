@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 /**
  * Classe ListController: permet d'afficher et de gérer la liste des étudiants
  * @date 04/2021
- * @author A. Calmont, J. Trouve, I. Sousane
+ * @author A. Calmont, I. Sousane, J. Trouve
  */
 public class ListController implements Initializable {
     /**

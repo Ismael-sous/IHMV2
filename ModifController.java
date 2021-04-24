@@ -9,7 +9,7 @@ import java.util.ResourceBundle;
 /**
  * Classe ModifController : permet la modification des informations d'un étudiant
  * @date 04/2021
- * @author A. Calmont, J. Trouve, I. Sousane
+ * @author A. Calmont, I. Sousane, J. Trouve
  */
 public class ModifController implements Initializable {
 
@@ -25,7 +25,6 @@ public class ModifController implements Initializable {
     private ComboBox optionCombo;
     @FXML
     private Label optLabel;
-
     private Stage dialogStage;
     private Etudiant etudiant;
     private boolean ok = false;

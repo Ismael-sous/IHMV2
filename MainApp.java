@@ -1,5 +1,4 @@
 import java.io.IOException;
-
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,10 +9,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
 /**
  * Classe MainApp: création d'une application de gestion de liste d'étudiants
  * @date 04/2021
- * @author A. Calmont, J. Trouve, I. Sousane
+ * @author A. Calmont, I. Sousane, J. Trouve
  */
     public class MainApp extends Application {
 
@@ -46,6 +46,7 @@ import javafx.stage.Stage;
             this.primaryStage.setTitle("GphyApp");
 
 
+
             initRootLayout();
             showAccueil();
         }
@@ -60,6 +61,7 @@ import javafx.stage.Stage;
                 loader.setLocation(MainApp.class.getResource("FXML/rootLayout.fxml"));
                 rootLayout = (BorderPane) loader.load();
 
+
                 // Show the scene containing the root layout.
                 Scene scene = new Scene(rootLayout);
                 primaryStage.setScene(scene);
@@ -70,7 +72,6 @@ import javafx.stage.Stage;
                 e.printStackTrace();
             }
         }
-
 
         /**
          * Affichage de l'accueil dans root layout

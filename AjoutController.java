@@ -3,14 +3,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 /**
  * Classe Etudiant: gestion de l'ajout d'un étudiant
  * @date 04/2021
- * @author A. Calmont, J. Trouve, I. Sousane
+ * @author A. Calmont, I. Sousane, J. Trouve
  */
 public class AjoutController implements Initializable {
 
@@ -26,7 +25,7 @@ public class AjoutController implements Initializable {
     private ComboBox optionCombo;
     @FXML
     private Label optLabel;
-
+    @FXML
     private MainApp mainApp;
 
     /**

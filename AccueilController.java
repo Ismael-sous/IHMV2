@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * Classe AccueilController : gestion de l'accueil de l'application
  * @date 04/2021
- * @author A. Calmont, J. Trouve, I. Sousane
+ * @author A. Calmont, I. Sousane, J. Trouve
  */
 public class AccueilController
 {
@@ -32,7 +32,6 @@ public class AccueilController
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     /**
