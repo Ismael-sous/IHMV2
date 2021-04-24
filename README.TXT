@@ -1,12 +1,15 @@
 ------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
+
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+PROJECT TITLE: GPHY APP
+
+PURPOSE OF PROJECT: Gestion d'une liste d'étudiant avec ajout, modification et suppression.
+
+VERSION or DATE: 24/04/2021
+
+HOW TO START THIS PROJECT:	Run MainApp
+
+AUTHORS: Groupe IHM BD28 (CALMONT, SOUSANE, TROUVE)
+
+USER INSTRUCTIONS: Version sdk utilisée: V16
