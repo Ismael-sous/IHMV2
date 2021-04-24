@@ -47,7 +47,7 @@
          <children>
             <ImageView fitHeight="75.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../ressources/img/th.jpg" />
+                  <Image url="@../ressources/img/th.png" />
                </image>
             </ImageView>
             <TextFlow layoutX="140.0" layoutY="16.0" prefHeight="34.0" prefWidth="405.0" style="-fx-background-color: #393647; -fx-background-radius: 10mm;" textAlignment="CENTER">
