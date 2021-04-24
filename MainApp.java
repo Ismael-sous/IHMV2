@@ -4,24 +4,28 @@ import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TitledPane;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
+/**
+ * Classe MainApp: création d'une application de gestion de liste d'étudiants
+ * @date 04/2021
+ * @author A. Calmont, J. Trouve, I. Sousane
+ */
     public class MainApp extends Application {
 
         private Stage primaryStage;
         private BorderPane rootLayout;
         private ObservableList<Etudiant> data = FXCollections.observableArrayList();
 
+    /**
+     * Constructeur
+     * Création d'une liste d'étudiants
+     */
         public MainApp(){
-            System.out.println("remplissage");
             data.add(new Etudiant("Jacob", "Smith", 1999, "M1", "Biotech"));
             data.add(new Etudiant("Emma", "Jones", 1998, "M2", "Imagerie"));
         }
@@ -31,7 +35,12 @@ import javafx.stage.Stage;
         public void setData(ObservableList<Etudiant> data) {
             this.data = data;
         }
-        @Override
+
+    /**
+     * Lancement de la fenêtre
+     * @param primaryStage
+     */
+    @Override
         public void start(Stage primaryStage) {
             this.primaryStage = primaryStage;
             this.primaryStage.setTitle("GphyApp");
@@ -41,7 +50,7 @@ import javafx.stage.Stage;
         }
 
         /**
-         * Initializes the root layout.
+         * Initialisation du root layout.
          */
         public void initRootLayout() {
             try {
@@ -62,24 +71,27 @@ import javafx.stage.Stage;
         }
 
         /**
-         * Shows the person overview inside the root layout.
+         * Affichage de l'accueil dans root layout
          */
         public void showAccueil() {
             try {
-                // Load person overview.
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(MainApp.class.getResource("FXML/accueil.fxml"));
                 AnchorPane accueil = loader.load();
                 AccueilController controller = loader.getController();
                 controller.setMainApp(this);
-                // Set person overview into the center of root layout.
                 rootLayout.setCenter(accueil);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
 
-        public boolean etuEdit(Etudiant etu){
+    /**
+     * Lancement de la modification d'un étudiant
+     * @param etu étudiant à modifier
+     * @return true si l'utilisateur valide la modification
+     */
+    public boolean etuEdit(Etudiant etu){
             try {
                 // Load the fxml file and create a new stage for the popup dialog.
                 FXMLLoader loader = new FXMLLoader();
@@ -95,7 +107,7 @@ import javafx.stage.Stage;
                 dialogStage.setScene(scene);
                 dialogStage.getIcons().add(new Image(MainApp.class.getResourceAsStream("ressources/img/modify.png")));
 
-                // Set the person into the controller.
+                // Set the student into the controller.
                 ModifController controller = loader.getController();
                 controller.setDialogStage(dialogStage);
                 controller.setEtu(etu);
@@ -121,7 +133,11 @@ import javafx.stage.Stage;
             launch(args);
         }
 
-        public BorderPane getRootLayout() {
+    /**
+     * Returns the root layout
+     * @return
+     */
+    public BorderPane getRootLayout() {
             return rootLayout;
         }
     }
