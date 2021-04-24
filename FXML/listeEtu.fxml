@@ -16,7 +16,7 @@
             <Font name="Tahoma" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="modifyButton" layoutX="462.0" layoutY="9.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="38.0" style="-fx-background-color: #393647;" textFill="WHITE">
+      <Button fx:id="modifyButton" layoutX="462.0" layoutY="9.0" mnemonicParsing="false" onAction="#modify" prefHeight="45.0" prefWidth="38.0" style="-fx-background-color: #393647;" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="37.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                <image>

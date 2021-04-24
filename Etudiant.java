@@ -53,4 +53,23 @@ public class Etudiant {
         return option.get();
     }
 
+    public void setPrenom(String prenom) {
+        this.prenom.set(prenom);
+    }
+
+    public void setNom(String nom) {
+        this.nom.set(nom);
+    }
+
+    public void setAnnee(int annee) {
+        this.annee.set(annee);
+    }
+
+    public void setPromo(String promo) {
+        this.promo.set(promo);
+    }
+
+    public void setOption(String option) {
+        this.option.set(option);
+    }
 }

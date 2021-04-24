@@ -79,6 +79,25 @@ public class ListController implements Initializable {
         }
     }
 
+    @FXML
+    public void modify() {
+        boolean okClicked = false;
+        Etudiant selectedEtu;
+        for (Etudiant etu : mainApp.getEtudiantData()) {
+            if (etu.getSelect().isSelected()) {
+                selectedEtu = etu;
+                mainApp.getEtudiantData().remove(etu);
+                okClicked = mainApp.etuEdit(selectedEtu);
+                mainApp.getEtudiantData().add(selectedEtu);
+                break;
+            }
+        }
+        if (okClicked) {
+            myTable.setItems(mainApp.getEtudiantData());
+
+        }
+    }
+
     public void setMainApp (MainApp mainApp){
         this.mainApp = mainApp;
         System.out.println(mainApp);

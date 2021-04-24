@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="Liste" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
-  <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-         <children>
-            <TableView fx:id="myTable" layoutX="14.0" layoutY="63.0" prefHeight="200.0" prefWidth="428.0" />
-            <Label alignment="CENTER" layoutX="156.0" layoutY="14.0" prefHeight="35.0" prefWidth="286.0" style="-fx-background-color: #393647; -fx-background-radius: 10mm;" text="Modification d'un étudiant" textFill="WHITE">
-               <font>
-                  <Font name="Tahoma" size="18.0" />
-               </font>
-            </Label>
-            <Button layoutX="332.0" layoutY="287.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="109.0" style="-fx-background-color: #393647;" text="Confirmer" textFill="WHITE" />
-            <Button layoutX="183.0" layoutY="287.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="109.0" style="-fx-background-color: ffffff; -fx-border-color: black; -fx-border-width: 1; -fx-border-radius: 2;" text="Annuler" />
-         </children></AnchorPane>
-  </content>
-</TitledPane>
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="343.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ModifController">
+   <children>
+      <Label alignment="CENTER" layoutX="156.0" layoutY="14.0" prefHeight="35.0" prefWidth="286.0" style="-fx-background-color: #393647; -fx-background-radius: 10mm;" text="Modification d'un étudiant" textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="332.0" layoutY="287.0" mnemonicParsing="false" onAction="#confirm" prefHeight="45.0" prefWidth="109.0" style="-fx-background-color: #393647;" text="Confirmer" textFill="WHITE" />
+      <Button layoutX="183.0" layoutY="287.0" mnemonicParsing="false" onAction="#cancel" prefHeight="45.0" prefWidth="109.0" style="-fx-background-color: ffffff; -fx-border-color: black; -fx-border-width: 1; -fx-border-radius: 2;" text="Annuler" />
+      <TextField fx:id="nomField" layoutX="222.0" layoutY="83.0" prefHeight="25.0" prefWidth="123.0" />
+      <Label layoutX="142.0" layoutY="87.0" text="Nom" />
+      <Label layoutX="135.0" layoutY="124.0" text="Prénom" />
+      <TextField fx:id="prenomField" layoutX="222.0" layoutY="120.0" prefHeight="25.0" prefWidth="123.0" />
+      <Label layoutX="103.0" layoutY="163.0" text="Année de naissance" />
+      <TextField fx:id="anneeField" layoutX="222.0" layoutY="159.0" prefHeight="25.0" prefWidth="123.0" />
+      <Label layoutX="128.0" layoutY="205.0" text="Promotion" />
+      <ComboBox fx:id="promoCombo" layoutX="223.0" layoutY="202.0" onAction="#afficheOption" prefHeight="25.0" prefWidth="123.0" />
+      <Label fx:id="optLabel" layoutX="136.0" layoutY="238.0" text="Option" />
+      <ComboBox fx:id="optionCombo" layoutX="223.0" layoutY="234.0" prefHeight="25.0" prefWidth="123.0" />
+   </children>
+</AnchorPane>
