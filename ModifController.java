@@ -1,12 +1,16 @@
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Classe ModifController : permet la modification des informations d'un étudiant
+ * @date 04/2021
+ * @author A. Calmont, J. Trouve, I. Sousane
+ */
 public class ModifController implements Initializable {
 
     @FXML
@@ -26,6 +30,11 @@ public class ModifController implements Initializable {
     private Etudiant etudiant;
     private boolean ok = false;
 
+    /**
+     * Initialisation des valeurs des ComboBox
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         String l3 = "L3";
@@ -39,6 +48,9 @@ public class ModifController implements Initializable {
         afficheOption();
     }
 
+    /**
+     * Gestion de l'affichage des comboBox en fonction de la promotion sélectionnée
+     */
     @FXML
     public void afficheOption() {
         if (promoCombo.getValue() == "L3" || promoCombo.getValue() == null) {
@@ -51,10 +63,18 @@ public class ModifController implements Initializable {
         }
     }
 
+    /**
+     * passage de l'instance pour la page de dialogue
+     * @param dialogStage
+     */
     public void setDialogStage(Stage dialogStage) {
         this.dialogStage = dialogStage;
     }
 
+    /**
+     * Mise à jour des champs avec les informations initiales de l'étudiant
+     * @param etu étudiant dont on souhaite modifier les infos
+     */
     public void setEtu(Etudiant etu){
         this.etudiant = etu;
 
@@ -66,10 +86,17 @@ public class ModifController implements Initializable {
         afficheOption();
     }
 
+    /**
+     *
+     * @return true si l'utilisateur a validé
+     */
     public boolean isOkClicked(){
         return ok;
     }
 
+    /**
+     * Mise à jour des informations de l'étudiant à partir des champs
+     */
     public void confirm(){
 
         if(isValid()){
@@ -78,12 +105,15 @@ public class ModifController implements Initializable {
             etudiant.setPromo((String)promoCombo.getValue());
             etudiant.setAnnee(Integer.parseInt(anneeField.getText()));
             etudiant.setOption((String)optionCombo.getValue());
-
             ok = true;
             dialogStage.close();
         }
     }
 
+    /**
+     * Vérification de la validité des informations rentrées par l'utilisateur avant modification
+     * @return true si les données sont valides
+     */
     public boolean isValid(){
         String errorMsg ="";
         if (nomField.getText() == null || nomField.getText().length() == 0) {
@@ -124,6 +154,9 @@ public class ModifController implements Initializable {
         }
     }
 
+    /**
+     * Annulation de la modification
+     */
     @FXML
     private void cancel(){
         dialogStage.close();
