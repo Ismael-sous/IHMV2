@@ -143,8 +143,10 @@ public class ListController implements Initializable {
         // Add observable list data to the table
         myTable.setItems(mainApp.getEtudiantData());
         for (Etudiant etu : mainApp.getEtudiantData()) {
+            etu.getSelect().setSelected(false);
             etu.getSelect().setOnAction(actionEvent -> {
-                deleteButton.setDisable(false);
+                if(etu.getSelect().isSelected())
+                    deleteButton.setDisable(false);
                 if (etu.getSelect().isSelected()) {
                     countCB += 1;
                 } else countCB -= 1;
