@@ -1,5 +1,3 @@
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -9,9 +7,12 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
-
+/**
+ * Classe Etudiant: gestion de l'ajout d'un étudiant
+ * @date 04/2021
+ * @author A. Calmont, J. Trouve, I. Sousane
+ */
 public class AjoutController implements Initializable {
-
 
     @FXML
     private TextField nomField;
@@ -28,10 +29,19 @@ public class AjoutController implements Initializable {
 
     private MainApp mainApp;
 
+    /**
+     * Permet de passer l'instance du main
+     * @param mainApp
+     */
     public void setMainApp (MainApp mainApp){
         this.mainApp = mainApp;
     }
 
+    /**
+     * Initialisation des valeurs des ComboBox
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         String l3 = "L3";
@@ -45,11 +55,18 @@ public class AjoutController implements Initializable {
         afficheOption();
     }
 
+    /**
+     * Permet de retourner sur la page d'accueil
+     */
     @FXML
     public void back(){
         mainApp.showAccueil();
     }
 
+    /**
+     * Vérification de la validité des informations rentrées par l'utilisateur avant ajout
+     * @return true si les données sont valides
+     */
     @FXML
     private boolean isValid(){
 
@@ -107,6 +124,9 @@ public class AjoutController implements Initializable {
         }
     }
 
+    /**
+     * Fenêtre de confirmation de l'ajout et ajout de l'étudiant
+     */
     @FXML
     public void ConfirmButton(){
         if(isValid()){
@@ -125,6 +145,9 @@ public class AjoutController implements Initializable {
         }
     }
 
+    /**
+     * Réinitialisation des champs d'ajout
+     */
     @FXML
     public void reinitialiser(){
         prenomField.clear();
