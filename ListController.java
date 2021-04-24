@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -61,9 +62,10 @@ public class ListController implements Initializable {
     @FXML
     private void confirmDelete(ActionEvent event) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        ((Stage)alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image("ressources/img/delete.png"));
         alert.setTitle("Confirmation de suppression");
         alert.setHeaderText("Suppression de l'étudiant");
-        alert.setContentText("Souhaites-vous supprimer cet étudiant?");
+        alert.setContentText("Souhaitez-vous supprimer cet étudiant ?");
         Optional<ButtonType> result = alert.showAndWait();
         ObservableList<Etudiant> dataListRemove = FXCollections.observableArrayList();
         if (result.get() == ButtonType.OK) {

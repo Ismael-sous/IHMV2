@@ -87,25 +87,25 @@ public class ModifController implements Initializable {
     public boolean isValid(){
         String errorMsg ="";
         if (nomField.getText() == null || nomField.getText().length() == 0) {
-            errorMsg += "Erreur : Nom invalide.\n";
+            errorMsg += "Nom invalide\n";
         }
         if (prenomField.getText() == null || prenomField.getText().length() == 0) {
-            errorMsg += "Erreur: Prénom invalide.\n";
+            errorMsg += "Prénom invalide\n";
         }
-        if (anneeField.getText() == null || anneeField.getText().length() <= 3) {
-            errorMsg += "Erreur: naissance invalide. \n";
+        if (anneeField.getText() == null || anneeField.getText().length() <= 3 || anneeField.getText().length() >4) {
+            errorMsg += "Année de naissance invalide \n";
         } else {
             try {
                 Integer.parseInt(anneeField.getText());
             } catch (NumberFormatException e) {
-                errorMsg += "Erreur: Veuillez renseigner une année valide\n";
+                errorMsg += "Veuillez renseigner une année valide\n";
             }
         }
         if (promoCombo.getValue() == null) {
-            errorMsg += "Erreur: promotion invalide. \n";
+            errorMsg += "Promotion invalide \n";
         }
         if (promoCombo.getValue() != "L3" && promoCombo.getValue() != null && optionCombo.getValue() == null) {
-            errorMsg += "Erreur: Veuillez sélectionner une option.\n";
+            errorMsg += "Veuillez sélectionner une option.\n";
         }
 
         if (errorMsg.length() == 0) {

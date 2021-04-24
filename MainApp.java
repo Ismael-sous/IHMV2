@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TitledPane;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -52,6 +53,7 @@ import javafx.stage.Stage;
                 // Show the scene containing the root layout.
                 Scene scene = new Scene(rootLayout);
                 primaryStage.setScene(scene);
+                primaryStage.getIcons().add(new Image(MainApp.class.getResourceAsStream("ressources/img/Logo-Master-GPhy.png")));
                 primaryStage.show();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -90,6 +92,7 @@ import javafx.stage.Stage;
                 dialogStage.initOwner(primaryStage);
                 Scene scene = new Scene(page);
                 dialogStage.setScene(scene);
+                dialogStage.getIcons().add(new Image(MainApp.class.getResourceAsStream("ressources/img/modify.png")));
 
                 // Set the person into the controller.
                 ModifController controller = loader.getController();
