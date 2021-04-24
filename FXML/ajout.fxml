@@ -25,8 +25,8 @@
             </DropShadow>
          </effect>
          <children>
-            <TextField layoutX="231.0" layoutY="35.0" />
-            <TextField layoutX="231.0" layoutY="87.0" />
+            <TextField fx:id="nomField" layoutX="231.0" layoutY="35.0" />
+            <TextField fx:id="prenomField" layoutX="231.0" layoutY="87.0" />
             <Label layoutX="39.0" layoutY="39.0" prefHeight="25.0" prefWidth="46.0" text="Nom">
                <font>
                   <Font name="Tahoma Bold" size="18.0" />
@@ -42,13 +42,7 @@
                   <Font name="Tahoma Bold" size="16.0" />
                </font>
             </Label>
-            <MenuButton layoutX="231.0" layoutY="134.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Année">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Action 1" />
-                  <MenuItem mnemonicParsing="false" text="Action 2" />
-               </items>
-            </MenuButton>
-            <MenuButton layoutX="231.0" layoutY="182.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Promotion">
+            <MenuButton fx:id="promoComb" layoutX="231.0" layoutY="182.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Promotion">
                <items>
                   <MenuItem mnemonicParsing="false" text="L3" />
                   <MenuItem mnemonicParsing="false" text="M1" />
@@ -85,13 +79,14 @@
                   <Image url="@../ressources/img/required.png" />
                </image>
             </ImageView>
-            <MenuButton layoutX="231.0" layoutY="234.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Option">
+            <MenuButton fx:id="optionCombo" layoutX="231.0" layoutY="234.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Option">
                <items>
                   <MenuItem mnemonicParsing="false" text="Biotechnologies" />
                   <MenuItem mnemonicParsing="false" text="Physiologie" />
                   <MenuItem mnemonicParsing="false" text="Imagerie" />
                </items>
             </MenuButton>
+            <TextField fx:id="anneeField" layoutX="231.0" layoutY="136.0" />
          </children>
       </Pane>
       <ImageView fx:id="backBtn" fitHeight="45.0" fitWidth="70.0" layoutX="26.0" layoutY="17.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
