@@ -2,15 +2,50 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.control.CheckBox;
 
-
+/**
+ * Classe Etudiant: création d'un étudiant
+ * @date 04/2021
+ * @author A. Calmont, J. Trouve, I. Sousane
+ */
 public class Etudiant {
+    /**
+     * Prénom de l'étudiant
+     */
     private SimpleStringProperty prenom;
+
+    /**
+     * Nom de l'étudiant
+     */
     private SimpleStringProperty nom;
+
+    /**
+     * Année de naissance de l'étudiant
+     */
     private SimpleIntegerProperty annee;
+
+    /**
+     * Promotion de l'étudiant (L3, M1 ou M2)
+     */
     private SimpleStringProperty promo;
+
+    /**
+     * Option de l'étudiant (Physiologie, Biotechnologie, Imagerie)
+     */
     private SimpleStringProperty option;
+
+    /**
+     * CheckBox liée à l'étudiant pour la sélection
+     */
     private CheckBox select;
 
+    /**
+     *
+     * @param prenom prénom de l'étudiant
+     * @param nom nom de l'étudiant
+     * @param annee année de naissance de l'étudiant
+     * @param promo promotion de l'étudiant
+     * @param option option de l'étudiant
+     */
     public Etudiant(String prenom, String nom, int annee, String promo, String option) {
         this.prenom = new SimpleStringProperty(prenom);
         this.nom = new SimpleStringProperty(nom);

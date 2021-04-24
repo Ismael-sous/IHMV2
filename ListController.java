@@ -19,31 +19,55 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+/**
+ * Classe ListController: permet d'afficher et de gérer la liste des étudiants
+ * @date 04/2021
+ * @author A. Calmont, J. Trouve, I. Sousane
+ */
 public class ListController implements Initializable {
+    /**
+     * Compte le nombre de checkBox cochée(s)
+     */
     private int countCB = 0;
+
+    /**
+     * Stockage de l'instance de la classe MainApp
+     */
     private MainApp mainApp;
+
+    /**
+     * Tableau affichant les étudiants
+     */
     @FXML
     private TableView myTable;
+
+    /**
+     * Bouton de modification des données d'un étudiant
+     */
     @FXML
     private Button modifyButton;
+
+    /**
+     * Bouton de suppression d'un étudiant de la liste
+     */
     @FXML
     private Button deleteButton;
-    @FXML
-    private AnchorPane paneList;
-    @FXML
-    private ImageView returnImage;
 
+    /**
+     * Initialisation de l'affichage des boutons et du tableau de la liste des étudiants
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         TableColumn prenom = new TableColumn("Prénom");
-        TableColumn<Etudiant, String> nom = new TableColumn<Etudiant, String>("Nom");
-        TableColumn<Etudiant, String> annee = new TableColumn<>("Année");
-        TableColumn<Etudiant, String> promo = new TableColumn<Etudiant, String>("Promotion");
-        TableColumn<Etudiant, String> option = new TableColumn<>("Option");
-        TableColumn<Etudiant, String> select = new TableColumn<>("Sélectionner");
-        //Button modifyButton = (Button) loader.getNamespace().get("modifyButton");
-        //Button deleteButton = (Button) loader.getNamespace().get("deleteButton");
+        TableColumn nom = new TableColumn<Etudiant, String>("Nom");
+        TableColumn annee = new TableColumn<>("Année");
+        TableColumn promo = new TableColumn<Etudiant, String>("Promotion");
+        TableColumn option = new TableColumn<>("Option");
+        TableColumn select = new TableColumn<>("Sélectionner");
 
+        //par défaut les boutons sont désactivés tant que l'utilisateur ne sélectionne pas d'étudiants dans la liste
         modifyButton.setDisable(true);
         deleteButton.setDisable(true);
 
@@ -58,7 +82,11 @@ public class ListController implements Initializable {
 
     }
 
-
+    /**
+     * Permet de confirmer la suppression de l'étudiant ou des étudiants sélectionné(s)
+     * @param event
+     * @throws IOException
+     */
     @FXML
     private void confirmDelete(ActionEvent event) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -76,11 +104,14 @@ public class ListController implements Initializable {
                     dataListRemove.add(etu);
                 }
             }
-           mainApp.setData(dataListRemove);
+            mainApp.setData(dataListRemove);
             myTable.setItems(mainApp.getEtudiantData());
         }
     }
 
+    /**
+     * Permet de lancer la modification des informations d'un étudiant
+     */
     @FXML
     public void modify() {
         boolean okClicked = false;
@@ -100,9 +131,14 @@ public class ListController implements Initializable {
         }
     }
 
+    /**
+     * Permet de passer l'instance du main
+     * Remplissage de la liste des étudiants
+     * Gestion de la disponibilité des boutons en fonction de la sélection de l'utilisateur
+     * @param mainApp instance du main
+     */
     public void setMainApp (MainApp mainApp){
         this.mainApp = mainApp;
-        System.out.println(mainApp);
 
         // Add observable list data to the table
         myTable.setItems(mainApp.getEtudiantData());
@@ -121,9 +157,12 @@ public class ListController implements Initializable {
             });
         }
     }
+
+    /**
+     * Permet de retourner sur la page d'accueil
+     */
     @FXML
     public void returnAccueil(){
         mainApp.showAccueil();
     }
 }
-
