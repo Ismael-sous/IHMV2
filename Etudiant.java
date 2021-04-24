@@ -55,6 +55,7 @@ public class Etudiant {
         this.select = new CheckBox();
     }
 
+
     public CheckBox getSelect() {
         return select;
     }

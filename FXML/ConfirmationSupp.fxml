@@ -6,16 +6,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="269.0" prefWidth="433.0" text="Erreur " textAlignment="RIGHT" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="269.0" prefWidth="433.0" text="Erreur " textAlignment="RIGHT" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AjoutController">
   <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="278.0" prefWidth="459.0">
+    <!--<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="278.0" prefWidth="459.0">
          <children>
-            <Button fx:id="okButton" layoutX="161.0" layoutY="145.0" mnemonicParsing="false" onAction="#okButtonAction" prefHeight="45.0" prefWidth="109.0" style="-fx-background-color: #393647;" text="OK" textFill="WHITE" />
+             <Button fx:id="okButton" layoutX="161.0" layoutY="145.0" mnemonicParsing="false" onAction="#okButtonAction" prefHeight="45.0" prefWidth="109.0" style="-fx-background-color: #393647;" text="OK" textFill="WHITE" />
             <Label layoutX="50.0" layoutY="56.0" text="Certains champs ne peuvent pas être vide">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-         </children></AnchorPane>
+         </children></AnchorPane>-->
   </content>
 </TitledPane>
