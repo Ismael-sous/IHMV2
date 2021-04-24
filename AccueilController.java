@@ -41,7 +41,6 @@ public class AccueilController
      */
     @FXML
     private void addStudent(MouseEvent event) {
-        Parent root;
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("FXML/ajout.fxml"));
